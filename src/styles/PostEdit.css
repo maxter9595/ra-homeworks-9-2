@@ -1,0 +1,113 @@
+.post-edit {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.edit-header {
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #65676b;
+}
+
+.post-edit form {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-edit textarea {
+  padding: 16px;
+  border: none;
+  resize: none;
+  min-height: 100px;
+  font-size: 15px;
+}
+
+.post-edit textarea:focus {
+  outline: none;
+}
+
+.edit-options {
+  padding: 12px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.options {
+  display: flex;
+  gap: 2px;
+}
+
+.options button {
+  background: none;
+  border: none;
+  color: #65676b;
+  cursor: pointer;
+  padding: 8px -8px;
+  border-radius: 4px;
+}
+
+.options button:hover {
+  background-color: #f0f2f5;
+}
+
+.save-btn {
+  background-color: #42b72a;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.save-btn:disabled {
+  background-color: #e4e6eb;
+  cursor: not-allowed;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+form textarea {
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+  min-height: 120px;
+  padding: 16px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #050505;
+  resize: vertical;
+  background-color: #f0f2f5;
+  transition: all 0.2s ease;
+}
+
+form textarea:focus {
+  outline: none;
+  border-color: #1877f2;
+  box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+  background-color: #fff;
+}

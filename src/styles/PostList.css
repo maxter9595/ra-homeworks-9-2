@@ -1,0 +1,136 @@
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.post-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.post-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.post-header {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.author-avatar {
+  background: linear-gradient(90deg, #f0f2f5 25%, #e4e6eb 50%, #f0f2f5 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+position: relative;
+}
+
+.author-avatar:hover::before {
+  content: attr(aria-label);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+
+.author-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.author-name {
+  font-weight: 600;
+  color: #050505;
+}
+
+.post-time {
+  color: #65676b;
+  font-size: 13px;
+  margin-left: 8px;
+}
+
+.post-content {
+  padding: 0 16px 16px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #050505;
+}
+
+.post-actions {
+  display: flex;
+  padding: 8px 0;
+  border-top: 1px solid #dddfe2;
+  border-bottom: 1px solid #dddfe2;
+}
+
+.action-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 8px;
+  color: #65676b;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.action-btn:hover {
+  background-color: #f0f2f5;
+}
+
+.comment-input {
+  padding: 12px 16px;
+  position: relative;
+}
+
+.comment-input input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 20px;
+  border: none;
+  background-color: #f0f2f5;
+  color: #050505;
+  font-size: 14px;
+  padding-left: 40px;
+}
+
+.comment-input::before {
+  content: "😊";
+  position: absolute;
+  left: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
